@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {button as buttonStyles} from '../styles'
 
 class StopWatch extends Component {
   state = {
@@ -41,14 +42,6 @@ class StopWatch extends Component {
   }
 
   render() {
-    const buttonStyles = {
-      border: '1px solid #ccc',
-      background: '#fff',
-      fontSize: '2em',
-      padding: '15px',
-      margin: '0 5px',
-      width: '200px',
-    }
     return (
       <div style={{textAlign: 'center'}}>
         <label style={{fontSize: '5em', display: 'block'}} data-test="ms">{this.state.lapse}ms</label>
