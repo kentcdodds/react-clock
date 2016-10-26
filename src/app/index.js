@@ -1,8 +1,9 @@
 import React, {Component} from 'react'
 import logo from './logo.svg'
 import './index.css'
-import StopWatch from './stopwatch'
+import StopWatch from '@kentcdodds/react-stopwatch'
 import Timer from './timer'
+import {button as buttonStyles} from './styles'
 
 class App extends Component {
   render() {
@@ -18,7 +19,7 @@ class App extends Component {
         <div style={{display: 'flex', justifyContent: 'center'}}>
           <div style={{marginRight: 40}}>
             <h3>Stopwatch</h3>
-            <StopWatch />
+            <StopWatch buttonStyles={buttonStyles} />
           </div>
           <div style={{marginLeft: 40}}>
             <h3>Countdown Timer</h3>

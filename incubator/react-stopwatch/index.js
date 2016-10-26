@@ -1,6 +1,9 @@
-import React, {Component} from 'react'
+import React, {Component, PropTypes} from 'react'
 
 class StopWatch extends Component {
+  static propTypes = {
+    buttonStyles: PropTypes.object,
+  }
   state = {
     running: false,
     lapse: 0,
@@ -41,14 +44,7 @@ class StopWatch extends Component {
   }
 
   render() {
-    const buttonStyles = {
-      border: '1px solid #ccc',
-      background: '#fff',
-      fontSize: '2em',
-      padding: '15px',
-      margin: '0 5px',
-      width: '200px',
-    }
+    const {buttonStyles} = this.props
     return (
       <div style={{textAlign: 'center'}}>
         <label style={{fontSize: '5em', display: 'block'}} data-test="ms">{this.state.lapse}ms</label>
