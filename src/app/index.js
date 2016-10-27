@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import logo from './logo.svg'
 import './index.css'
-import StopWatch from './stopwatch'
+import StopWatch from '@kentcdodds/react-stopwatch'
 import Timer from './timer'
 import {button as buttonStyles} from './styles'
 
